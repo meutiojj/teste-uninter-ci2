@@ -1,0 +1,84 @@
+<div id="sortableKanbanBoards" class="row">
+	<div class="panel panel-primary kanban-col">
+		<div class="panel-heading">
+			Demanda <span class="badge badge-pill">&nbsp;{{
+				demanda.count? demanda.count :0 }}&nbsp;</span>
+		</div>
+		<div class="panel-body">
+			<div id="kanban-demanda" class="kanban-centered">
+				<article class="kanban-entry grab" id="item5" draggable="true">
+					<div class="kanban-entry-inner">
+						<div class="kanban-label  no-padding-h">
+							<div class="col-sm-9 col-md-9 col-lg-9  no-padding-h no-margin-h">
+								<h2>CURSO</h2>
+								<b>Aula</b>
+								<div class="col-md-12 col-lg-12  no-padding-h no-margin-h">
+									<button type="button" class="btn btn-info btn-xs">
+										<b>{{ aula.professor?aula.professor:'#professor1' }}</b>
+									</button>
+
+									<button type="button" class="btn btn-info btn-xs">
+										<b>{{ aula.professor?aula.professor:'#professor2' }}</b>
+									</button>
+								</div>
+							</div>
+							<div class="col-sm-3 col-md-3 col-lg-3 no-padding-h no-margin-h">
+								<button type="button"
+									class="btn btn-info col-sm-12 btn-numero-aula col-md-12 col-lg-12">
+									<strong>A{{ aula.id?aula.id:'X' }}</strong>
+								</button>
+								<a class="col-sm-offset-2 col-md-offset-2 col-mg-offset-2  col-col-sm-10 col-md-10 col-lg-10 btn btn-lime text-success btn-xs ">
+									<b>{{aula.ano?aula.ano:'#ano' }}</b></a>
+							</div>
+							<div class="div-arquivo col-xs-8 col-sm-8 col-md-8 col-lg-9  no-padding-h no-margin-h" style="margin-top:1.1em;">	
+							<span class=" glyphicon glyphicon-file"></span> <span
+										class="glyphicon glyphicon-facetime-video"></span>
+							</div>
+							<div class="col-xs-4 col-sm-4 col-md-4 col-lg-3  text-nowrap"  style="margin-top:1.1em;">								
+							<a class="mover">Mover</a> <a class="editar">Editar</a>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+		</div>
+
+	</div>
+
+	{# RECEBIDO#}
+	<div class="panel kanban-col">
+		<div class="panel-heading">
+			Material Recebido <i class="fa fa-2x fa-plus-circle pull-right"></i>
+		</div>
+		<div class="panel-body">
+			<div id="kanban-recebido" class="kanban-centered"></div>
+		</div>
+	</div>
+
+	{# CONFERÊNCIA#}
+
+	<div class="panel panel-danger kanban-col">
+		<div class="panel-heading">
+			Para Conferência <i class="fa fa-2x fa-plus-circle pull-right"></i>
+		</div>
+		<div class="panel-body">
+			<div id="kanban-conferencia" class="kanban-centered"></div>
+		</div>
+	</div>
+
+	{# CONFERIDO#}
+
+
+	<div class="panel panel-warning kanban-col kanban-last">
+		<div class="panel-heading ">
+			<span class="text-success">Conferido <i
+				class="fa fa-2x fa-plus-circle pull-right"></i></span>
+		</div>
+		<div class="panel-body">
+			<div id="kanban-conferido" class="kanban-centered"></div>
+		</div>
+	</div>
+</div>
+<div class="col-md-12 col-lg-12 row">
+		<a class="btn btn-primary" href="#">Criar Card</a>
+</div>

@@ -1,0 +1,63 @@
+{% extends 'html5-base.twig' %} {% block js_lazy %} {{ parent() }}
+{# <script src="{{ js_url('kanban.js') }}"></script>#}
+{% endblock %} {% block css_lazy %} {{ parent() }}
+<link href="{{ css_url('kanban.css') }}" rel="stylesheet"
+	type="text/css" />
+{% endblock %} {% block body %} {{parent()}}
+	<div class="container-fluid">
+		<div class="row col-md-12 col-lg-12 div-top">
+			<form id="filter">
+				<div class="col-md-2 col-lg-2">
+					<label>Curso</label> 
+					<select class="form-control">
+						<option value="1">selecione
+							</options>
+					
+					</select>
+				</div>
+
+				<div class="col-md-2 col-lg-2">
+					<label>Disciplina</label> <select class="form-control">
+						<option value="1">selecione
+							</options>
+					
+					</select>
+				</div>
+
+				<div class="col-md-1 col-lg-1">
+					<label>Nº Aula</label> <select class="form-control">
+						<option value="1">selecione
+							</options>
+					
+					</select>
+				</div>
+
+				<div class="col-md-3 col-lg-3">
+					<label>Nome do Professor</label> <select class="form-control">
+						<option value="1">selecione
+							</options>
+					
+					</select>
+				</div>
+
+				<div class="col-md-2 col-lg-2">
+					<label>Ordenar por</label> <select class="form-control">
+						<option value="1">Ano
+							</options>
+					
+					</select>
+				</div>
+
+				<div class="col-md-1 col-lg-1">
+					<label>&nbsp;</label> <select class="form-control">
+						<option value="1">Crescente
+							</options>
+					
+					</select>
+				</div>
+
+			</form>
+		</div>
+{% include 'home/kanban.twig' %}
+	</div>
+{%endblock%}
